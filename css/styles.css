@@ -93,6 +93,35 @@
     margin-bottom: 15px;
 }
 
+.modal {
+  z-index: 5;
+  width: 700px;
+  height: 350px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  padding: 25px;
+  background-color: tomato; 
+  animation-name: showModal;
+  animation-duration: 3s;
+}
+
+@keyframes showModal {
+  from{
+    bottom: -1
+  }
+  to{
+    top: 25%
+  }
+}
+
+.inner-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* text sizes */
 .text-0 {
     font-size: 11px !important;
