@@ -8,14 +8,20 @@ const showModal = () => {
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-const delayedModal = async () => {
+const delayShowModal = async () => {
     await delay(5000);
     showModal()
 };
 
+const delayHideModal = async () => {
+    modal.classList.add('hideModal')
+    await delay(2000);
+    modal.hidden = true
+};
+
 
 hideButton.addEventListener('click', () => {
-    modal.hidden = true
+    delayHideModal()
 })
 
-delayedModal()
+delayShowModal()
