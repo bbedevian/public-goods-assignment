@@ -103,15 +103,23 @@
   padding: 25px;
   background-color: tomato; 
   animation-name: showModal;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @keyframes showModal {
-  from{
-    bottom: -1
+  0% {
+    transform:translateY(100%);
   }
-  to{
-    top: 25%
+  100% {
+    transform:translateY(0%);
+  }
+}
+@keyframes hideModal {
+  0% {
+    transform:translateY(0%);
+  }
+  100% {
+    transform:translateY(100%);
   }
 }
 
